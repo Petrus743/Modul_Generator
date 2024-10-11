@@ -74,7 +74,7 @@ function total_waktu() {
 
   let display = document.querySelector(".display");
 
-  display.innerHTML = "Total = " + total;
+  display.innerHTML = "Total = " + total + "menit";
 
   return total;
 }
