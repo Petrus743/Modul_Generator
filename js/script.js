@@ -68,13 +68,37 @@ const navbarNav = document.querySelector(".navbar-nav");
 // alokasi waktu
 function total_waktu() {
   // let jumlah_pertemuan = document.getElementById("jmlpertemuan").value;
+  let jenjang = document.getElementById("jenjang").value;
   let jam_pembelajaran = document.querySelector(".jmljam").value;
+  let total = 0;
 
-  let total = jam_pembelajaran * 45;
+  function clearForm() {
+    document.querySelector(".jmljam").value = 0;
+  }
+
+  function Jenjang() {
+    let jenjang = document.querySelector(".jenjang").value;
+    let identitas = document.querySelector(".identitas4");
+    identitas.innerHTML = jenjang;
+  }
+
+  if (jenjang === "SD") {
+    total = jam_pembelajaran * 30;
+    Jenjang();
+  } else if (jenjang === "SMP") {
+    total = jam_pembelajaran * 35;
+    Jenjang();
+  } else if (jenjang === "SMA" || jenjang === "SMK") {
+    total = jam_pembelajaran * 45;
+    Jenjang();
+  } else {
+    alert("Pilih jenjang");
+    clearForm();
+  }
 
   let display = document.querySelector(".display");
 
-  display.innerHTML = "Total  = "  + total + " menit";
+  display.innerHTML = "Total  = " + total + " menit";
 
   return total;
 }
@@ -796,8 +820,10 @@ sekolah.onchange = Sekolah;
 function Sekolah() {
   let sekolah = document.querySelector(".sekolah").value;
   let identitas = document.querySelector(".identitas2");
+  let namaSekolah = document.querySelector(".namaSekolah");
   // document.querySelector(".identitas2").append(sekolah);
   identitas.innerHTML = sekolah;
+  namaSekolah.innerHTML = sekolah;
 }
 
 //tahun
@@ -812,14 +838,37 @@ function Tahun() {
 }
 
 // jenjang
-let jenjang = document.querySelector(".jenjang");
-jenjang.onchange = Jenjang;
+// let jenjang = document.querySelector(".jenjang");
+// jenjang.onchange = Jenjang;
 
-function Jenjang() {
-  let jenjang = document.querySelector(".jenjang").value;
-  let identitas = document.querySelector(".identitas4");
-  // document.querySelector(".identitas4").append(jenjang);
-  identitas.innerHTML = jenjang;
+// function Jenjang() {
+//   let jenjang = document.querySelector(".jenjang").value;
+//   let identitas = document.querySelector(".identitas4");
+//   identitas.innerHTML = jenjang;
+// }
+
+//tempat
+let tempat = document.querySelector(".tempat");
+tempat.onchange = Tempat;
+
+function Tempat() {
+  let tempat = document.querySelector(".tempat").value;
+  let identitas = document.querySelector(".identitas8");
+  let namaTempat = document.querySelector(".nama_tempat");
+  identitas.innerHTML = tempat;
+  namaTempat.innerHTML = tempat;
+}
+//kepsek
+
+let kepsek = document.querySelector(".kepsek");
+kepsek.onchange = Kepsek;
+
+function Kepsek() {
+  let kepsek = document.querySelector(".kepsek").value;
+  let identitas = document.querySelector(".identitas9");
+  let namaKepsek = document.querySelector(".nama_kepsek");
+  identitas.innerHTML = kepsek;
+  namaKepsek.innerHTML = kepsek;
 }
 
 //fase

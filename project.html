@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <meta name="viewport" content="width= 1, initial-scale=1.0" />
     <title>Modul Ajar</title>
 
     <!-- Fonts -->
@@ -19,7 +19,6 @@
 
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
-
 
     <!-- style -->
 
@@ -58,11 +57,28 @@
             <li>Tahun</li>
             <input class="tahun" type="text" />
             <li>Jenjang</li>
-            <input class="jenjang" type="text" />
+            <form action="">
+              <select
+                name="jenjang"
+                id="jenjang"
+                class="jenjang"
+                onchange="total_waktu()"
+              >
+                <option value="">Pilih Jenjang</option>
+                <option value="SD">Sekolah Dasar</option>
+                <option value="SMP">Sekolah Menengah Pertama</option>
+                <option value="SMA">Sekolah Menengah Atas</option>
+                <option value="SMK">Sekolah Menengah Kejuruan</option>
+              </select>
+            </form>
+            <li>Tempat</li>
+            <input class="tempat" type="text" />
+            <li>Nama Kepala Sekolah</li>
+            <input class="kepsek" type="text" />
             <li>Fase / Kelas</li>
             <input class="fase" type="text" />
             <li>Mata Pelajaran</li>
-            <input class="mataPelajaran" type="text">
+            <input class="mataPelajaran" type="text" />
             <li>Alokasi Waktu</li>
             <div class="alokasiWaktu">
               <!-- <h4>Jumlah Pertemuan</h4>
@@ -81,37 +97,13 @@
         </div>
 
         <div class="profil">
+          <h3>Profil Pelajar Pancasila</h3>
 
-          <h3>
-            Profil Pelajar Pancasila
-
-            <!-- help-circle -->
-
-            <!-- <div class="inpo"><i data-feather="help-circle"></i></div>
-            <div id="hide_p5" class="hide">
-              <p>
-                Profil pelajar pancasila meliputi; Beriman dan bertakwa, gotong royong, kreatif, mandiri, kritis, berkebinekaan
-              </p>
-              <p>
-                <b>Contoh:</b> Peserta didik diharapkan bisa kreatif dalam menerapkan teknik dasar fotografi
-                pada sebuah karya fotografi
-              </p>
-            </div> -->
-          </h3>
-            <!-- <button onclick="Bertakwa()">Beriman & Bertakwa</button>
-            <button onclick="mandiri()">Mandiri</button>
-            <button onclick="kreatif()">Kreatif</button>
-            <button onclick="kritis()">Kritis</button>
-            <button onclick="Berkebinekaan()">Berkebinekaan</button>
-
-            <div id="input"></div> -->
-            
-          
-          <input class="profilPelajar1" type="text">
-          <input class="profilPelajar2" type="text">
-          <input class="profilPelajar3" type="text">
-          <input class="profilPelajar4" type="text">
-          <input class="profilPelajar5" type="text">
+          <input class="profilPelajar1" type="text" />
+          <input class="profilPelajar2" type="text" />
+          <input class="profilPelajar3" type="text" />
+          <input class="profilPelajar4" type="text" />
+          <input class="profilPelajar5" type="text" />
         </div>
 
         <div class="capaianPembelajaran">
@@ -204,63 +196,25 @@
           <input class="sarana5" type="text" />
         </div>
 
-        <div class="strategiPembelajaran">
-          <!-- diberi opsi (model pembe;ajaran) -->
-
-          <div class="materi">
-            <h3>
-              Materi Ajar
-              <!-- help-circle -->
-              <!-- <div class="inpo"><i data-feather="help-circle"></i></div>
-              <div class="hide">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Consequuntur, dolore!
-                </p>
-              </div> -->
-            </h3>
-            <input class="materi1" type="text" />
-            <input class="materi2" type="text" />
-            <input class="materi3" type="text" />
-            <input class="materi4" type="text" />
-            <input class="materi5" type="text" />
-          </div>
-
-          <!-- <div class="sumber">
-            <h3>
-              Sumber Belajar
-              <div class="inpo"><i data-feather="help-circle"></i></div>
-              <div class="hide">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Consequuntur, dolore!
-                </p>
-              </div>
-            </h3>
-            <input class="sumber1" type="text" />
-            <input class="sumber2" type="text" />
-          </div> -->
-
-          <h3>
-            Strategi Pembelajaran
-            <!-- help-circle -->
-            <!-- <div class="inpo"><i data-feather="help-circle"></i></div>
-            <div class="hide">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur, dolore!
-              </p>
-            </div> -->
-          </h3>
-          
-        <div class="pendekatan">
-          <p>Pendekatan : <span class="pendekatanPembelajaran"></span></p>
-          <button id="contextual" onclick="contextual()">CTL</button>
-          <button id="tpack" onclick="tpack()">TPACK</button>
-          <button id="saintifik" onclick="saintifik()">Saintifik</button>
-          <button id="steam" onclick="steam()">STEAM</button>
-          
+        <div class="materi">
+          <h3>Materi Ajar</h3>
+          <input class="materi1" type="text" />
+          <input class="materi2" type="text" />
+          <input class="materi3" type="text" />
+          <input class="materi4" type="text" />
+          <input class="materi5" type="text" />
         </div>
+
+        <div class="strategiPembelajaran">
+          <h3>Strategi Pembelajaran</h3>
+
+          <div class="pendekatan">
+            <p>Pendekatan : <span class="pendekatanPembelajaran"></span></p>
+            <button id="contextual" onclick="contextual()">CTL</button>
+            <button id="tpack" onclick="tpack()">TPACK</button>
+            <button id="saintifik" onclick="saintifik()">Saintifik</button>
+            <button id="steam" onclick="steam()">STEAM</button>
+          </div>
 
           <div class="model">
             <p>Model : <span class="modelPertemuan"></span></p>
@@ -274,7 +228,6 @@
             <button id="model4" onclick="discovery()">
               Discovery Learning
             </button>
-            
           </div>
 
           <div class="metode">
@@ -284,29 +237,18 @@
             <button class="demonstrasi">Demonstrasi</button>
             <button class="eksperimen">Eksperimen</button>
             <button class="tanyajawab">TanyaJawab</button>
-            
           </div>
         </div>
 
         <div class="target">
-          <h3>
-            Target Peserta Didik
-            <!-- help-circle -->
-            <!-- <div class="inpo"><i data-feather="help-circle"></i></div>
-            <div class="hide">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur, dolore!
-              </p>
-            </div> -->
-          </h3>
+          <h3>Target Peserta Didik</h3>
           <input class="targetPeserta" type="text" />
         </div>
 
         <div class="kegiatan">
           <h3>Kegiatan Pembelajaran</h3>
-          <div id="form_kegiatan"></div>
-          <!-- <h3>Pertemuan Pertama</h3> -->
+          <!-- <div id="form_kegiatan"></div> -->
+
           <h4>Pendahuluan</h4>
           <ol>
             <li>
@@ -350,105 +292,121 @@
 
           <h4>Kegitan Inti</h4>
           <ol>
-            <li><span class="sintak0"></li>
-              <p>(Alokasi Waktu) <span><input type="number" class = "input_waktu1"> menit</span></p>
-            <input class="sintak0Inti1" type="text" />
-            <input class="sintak0Inti2" type="text" />
-            <input class="sintak0Inti3" type="text" />
-            <input class="sintak0Inti4" type="text" />
-            <input class="sintak0Inti5" type="text" />
-            <!-- <button onclick="tambahMengamati()">+</button>
-            <button onclick="hapusMengamati()">-</button> -->
+            <li>
+              <span class="sintak0"> </span>
+              <p>
+                (Alokasi Waktu)
+                <span><input type="number" class="input_waktu1" /> menit</span>
+              </p>
+              <input class="sintak0Inti1" type="text" />
+              <input class="sintak0Inti2" type="text" />
+              <input class="sintak0Inti3" type="text" />
+              <input class="sintak0Inti4" type="text" />
+              <input class="sintak0Inti5" type="text" />
+            </li>
 
-            <li class="sintak1"></li>
-            <p>(Alokasi Waktu) <span><input type='number' class = 'input_waktu2'> menit</span></p>
-            <input class="sintak1Inti1" type="text" />
-            <input class="sintak1Inti2" type="text" />
-            <input class="sintak1Inti3" type="text" />
-            <input class="sintak1Inti4" type="text" />
-            <input class="sintak1Inti5" type="text" />
-            <!-- <button onclick="tambahMenanya()">+</button>
-            <button onclick="hapusMenanya()">-</button> -->
+            <li>
+              <span class="sintak1"></span>
+              <p>
+                (Alokasi Waktu)
+                <span><input type="number" class="input_waktu2" /> menit</span>
+              </p>
+              <input class="sintak1Inti1" type="text" />
+              <input class="sintak1Inti2" type="text" />
+              <input class="sintak1Inti3" type="text" />
+              <input class="sintak1Inti4" type="text" />
+              <input class="sintak1Inti5" type="text" />
+            </li>
 
-            <li class="sintak2"></li>
-            <p>(Alokasi Waktu) <span><input type='number' class = 'input_waktu3'> menit</span></p>
-            <input class="sintak2Inti1" type="text" />
-            <input class="sintak2Inti2" type="text" />
-            <input class="sintak2Inti3" type="text" />
-            <input class="sintak2Inti4" type="text" />
-            <input class="sintak2Inti5" type="text" />
-            <!-- <button onclick="tambahMengeksplorasi()">+</button>
-            <button onclick="hapusMengeksplorasi()">-</button> -->
+            <li>
+              <span class="sintak2"></span>
+              <p>
+                (Alokasi Waktu)
+                <span><input type="number" class="input_waktu3" /> menit</span>
+              </p>
+              <input class="sintak2Inti1" type="text" />
+              <input class="sintak2Inti2" type="text" />
+              <input class="sintak2Inti3" type="text" />
+              <input class="sintak2Inti4" type="text" />
+              <input class="sintak2Inti5" type="text" />
+            </li>
 
-            <li class="sintak3"></li>
-            <p>(Alokasi Waktu) <span><input type='number' class = 'input_waktu4'> menit</span></p>
-            <input class="sintak3Inti1" type="text" />
-            <input class="sintak3Inti2" type="text" />
-            <input class="sintak3Inti3" type="text" />
-            <input class="sintak3Inti4" type="text" />
-            <input class="sintak3Inti5" type="text" />
-            <!-- <button onclick="tambahMenalar()">+</button>
-            <button onclick="hapusMenalar()">-</button> -->
+            <li>
+              <span class="sintak3"></span>
+              <p>
+                (Alokasi Waktu)
+                <span><input type="number" class="input_waktu4" /> menit</span>
+              </p>
+              <input class="sintak3Inti1" type="text" />
+              <input class="sintak3Inti2" type="text" />
+              <input class="sintak3Inti3" type="text" />
+              <input class="sintak3Inti4" type="text" />
+              <input class="sintak3Inti5" type="text" />
+            </li>
 
-            <li class="sintak4"></li>
-            <p>(Alokasi Waktu) <span><input type='number' class = 'input_waktu5'> menit</span></p>
-            <input class="sintak4Inti1" type="text" />
-            <input class="sintak4Inti2" type="text" />
-            <input class="sintak4Inti3" type="text" />
-            <input class="sintak4Inti4" type="text" />
-            <input class="sintak4Inti5" type="text" />
-            <!-- <button onclick="tambahMenalar()">+</button>
-            <button onclick="hapusMenalar()">-</button> -->
+            <li>
+              <span class="sintak4"></span>
+              <p>
+                (Alokasi Waktu)
+                <span><input type="number" class="input_waktu5" /> menit</span>
+              </p>
+              <input class="sintak4Inti1" type="text" />
+              <input class="sintak4Inti2" type="text" />
+              <input class="sintak4Inti3" type="text" />
+              <input class="sintak4Inti4" type="text" />
+              <input class="sintak4Inti5" type="text" />
+            </li>
 
             <div class="sintakhide">
-              <li class="sintak5"></li>
-              <p>(Alokasi Waktu) <span><input type='number' class = 'input_waktu6'> menit</span></p>
-              <input class="sintak5Inti1" type="text" />
-              <input class="sintak5Inti2" type="text" />
-              <input class="sintak5Inti3" type="text" />
-              <input class="sintak5Inti4" type="text" />
-              <input class="sintak5Inti5" type="text" />
-              <!-- <button onclick="tambahMenalar()">+</button>
-              <button onclick="hapusMenalar()">-</button> -->
+              <li>
+                <span class="sintak5"></span>
+                <p>
+                  (Alokasi Waktu)
+                  <span
+                    ><input type="number" class="input_waktu6" /> menit</span
+                  >
+                </p>
+                <input class="sintak5Inti1" type="text" />
+                <input class="sintak5Inti2" type="text" />
+                <input class="sintak5Inti3" type="text" />
+                <input class="sintak5Inti4" type="text" />
+                <input class="sintak5Inti5" type="text" />
+              </li>
             </div>
           </ol>
 
           <h4>Penutup</h4>
-          
-          <p>(Alokasi Waktu) <span><input type='number' class = 'waktu_penutup1'> menit</span></p>
-          <input class="penutup1" type="text">
-          <input class="penutup2" type="text">
-          <input class="penutup3" type="text">
-          <input class="penutup4" type="text">
-          <input class="penutup5" type="text">
-          
-          <!-- <div id="pertemuan"></div>
-          <button class="buttonPertemuan" onclick="tambahPertemuan()">
-            Tambah Pertemuan
-          </button> -->
+
+          <p>
+            (Alokasi Waktu)
+            <span><input type="number" class="waktu_penutup1" /> menit</span>
+          </p>
+          <input class="penutup1" type="text" />
+          <input class="penutup2" type="text" />
+          <input class="penutup3" type="text" />
+          <input class="penutup4" type="text" />
+          <input class="penutup5" type="text" />
         </div>
 
         <div class="asesmen">
           <h3>Asesmen</h3>
-          <!-- <button class="formatif">Formatif</button>
-          <button class="sumatif">Sumatif</button> -->
-          <p class="jenisPenilaian"></p>
+          <!-- <p class="jenisPenilaian"></p> -->
           <p>Formatif</p>
           <ol>
             <li>Sikap</li>
-              <!-- <p>Teknik : </p> -->
-                <input class="teknik1" type="text" onchange="Teknik1()">
-              <!-- <p>Instrumen : </p>
+            <!-- <p>Teknik : </p> -->
+            <input class="teknik1" type="text" onchange="Teknik1()" />
+            <!-- <p>Instrumen : </p>
                 <input class="instrumen1" type="text" onchange="Instrumen1()"> -->
             <li>Pengetahuan</li>
-              <!-- <p>Teknik : </p> -->
-                <input class="teknik2" type="text" onchange="Teknik2()">
-              <!-- <p>Instrumen : </p>
+            <!-- <p>Teknik : </p> -->
+            <input class="teknik2" type="text" onchange="Teknik2()" />
+            <!-- <p>Instrumen : </p>
                <input class="instrumen2" type="text" onchange="Instrumen2()"> -->
             <li>Keterampilan</li>
-              <!-- <p>Teknik : </p> -->
-                <input class="teknik3" type="text" onchange="Teknik3()">
-              <!-- <p>Instrumen : </p>
+            <!-- <p>Teknik : </p> -->
+            <input class="teknik3" type="text" onchange="Teknik3()" />
+            <!-- <p>Instrumen : </p>
               <input class="instrumen3" type="text" onchange="Instrumen3()"> -->
           </ol>
           <!-- <input class="asesmen1" type="text" />
@@ -478,7 +436,7 @@
         </div>
 
         <div>
-          <button class="unduh">Berikutnya</a></button>
+          <button class="unduh">Berikutnya</button>
         </div>
 
         <!-- display -->
@@ -505,11 +463,23 @@
                 <td><p>:</p></td>
                 <td><p class="identitas3"></p></td>
               </tr>
-              
+
               <tr>
                 <td><p>Jenjang</p></td>
                 <td><p>:</p></td>
                 <td><p class="identitas4"></p></td>
+              </tr>
+
+              <tr>
+                <td><p>Tempat</p></td>
+                <td><p>:</p></td>
+                <td><p class="identitas8"></p></td>
+              </tr>
+
+              <tr>
+                <td><p>Nama Kepala Sekolah</p></td>
+                <td><p>:</p></td>
+                <td><p class="identitas9"></p></td>
               </tr>
 
               <tr>
@@ -536,14 +506,12 @@
               <li>Model</li>
               <p class="identitas8"></p> -->
             </table>
-            <tr>
-
-            </tr>
+            <tr></tr>
           </div>
 
           <div class="display_profilpelajar">
             <h3>2. Profil Pelajar Pancasila</h3>
-            
+
             <p class="inputProfil1"></p>
             <p class="inputProfil2"></p>
             <p class="inputProfil3"></p>
@@ -606,13 +574,13 @@
                 <td><p>:</p></td>
                 <td><p class="inputModel"></p></td>
               </tr>
-              
+
               <tr>
                 <td><p>Metode</p></td>
                 <td><p>:</p></td>
                 <td><p class="inputMetode"></p></td>
               </tr>
-          </table>
+            </table>
           </div>
 
           <div class="display_target">
@@ -639,82 +607,82 @@
               </tr>
               <tr>
                 <td class="tabel_pendahuluan">
-                <p><b>Orientasi</b></p>
+                  <p><b>Orientasi</b></p>
                   <p class="inputOrientasi1"></p>
                   <p class="inputOrientasi2"></p>
                   <p class="inputOrientasi3"></p>
                   <p class="inputOrientasi4"></p>
                   <p class="inputOrientasi5"></p>
-                <p><b>Motivasi</b></p>
+                  <p><b>Motivasi</b></p>
                   <p class="inputMotivasi1"></p>
                   <p class="inputMotivasi2"></p>
                   <p class="inputMotivasi3"></p>
                   <p class="inputMotivasi4"></p>
                   <p class="inputMotivasi5"></p>
-                <p><b>Apersepsi</b></p>
-                <ol>
-                  <p class="inputApersepsi1"></p>
-                  <p class="inputApersepsi2"></p>
-                  <p class="inputApersepsi3"></p>
-                  <p class="inputApersepsi4"></p>
-                  <p class="inputApersepsi5"></p>
-                  <p class="inputApersepsi6"></p>
-                  <p class="inputApersepsi7"></p>
-                </ol>
+                  <p><b>Apersepsi</b></p>
+                  <ol>
+                    <p class="inputApersepsi1"></p>
+                    <p class="inputApersepsi2"></p>
+                    <p class="inputApersepsi3"></p>
+                    <p class="inputApersepsi4"></p>
+                    <p class="inputApersepsi5"></p>
+                    <p class="inputApersepsi6"></p>
+                    <p class="inputApersepsi7"></p>
+                  </ol>
                 </td>
                 <td><p id="waktu1" class="inputWaktuPendahuluan"></p></td>
               </tr>
             </table>
             <p><b>b. Kegiatan Inti</b></p>
-              <table>
-                <tr>
-                  <th>Deskripsi</th>
-                  <th>Alokasi Waktu</th>
-                </tr>
-                <tr>
-                  <td class="tabel_inti">
-                    <p class="s1"></p>
-                      <div>
-                        <p class="input1Inti1"></p>
-                        <p class="input1Inti2"></p>
-                        <p class="input1Inti3"></p>
-                        <p class="input1Inti4"></p>
-                        <p class="input1Inti5"></p>
-                      </div>
-                    <p class="s2"></p>
-                        <p class="input2Inti1"></p>
-                        <p class="input2Inti2"></p>
-                        <p class="input2Inti3"></p>
-                        <p class="input2Inti4"></p>
-                        <p class="input2Inti5"></p>
-                    <p class="s3"></p>
-                        <p class="input3Inti1"></p>
-                        <p class="input3Inti2"></p>
-                        <p class="input3Inti3"></p>
-                        <p class="input3Inti4"></p>
-                        <p class="input3Inti5"></p>
-                    <p class="s4"></p>
-                        <p class="input4Inti1"></p>
-                        <p class="input4Inti2"></p>
-                        <p class="input4Inti3"></p>
-                        <p class="input4Inti4"></p>
-                        <p class="input4Inti5"></p>
-                    <p class="s5"></p>
-                        <p class="input5Inti1"></p>
-                        <p class="input5Inti2"></p>
-                        <p class="input5Inti3"></p>
-                        <p class="input5Inti4"></p>
-                        <p class="input5Inti5"></p>
-                    <p class="s6"></p>
-                        <p class="input6Inti1"></p>
-                        <p class="input6Inti2"></p>
-                        <p class="input6Inti3"></p>
-                        <p class="input6Inti4"></p>
-                        <p class="input6Inti5"></p>
-                    <td><p id="waktu1" class="inputWaktuInti"></p></td>
-                  </td>
-                </tr>
-              </table>
+            <table>
+              <tr>
+                <th>Deskripsi</th>
+                <th>Alokasi Waktu</th>
+              </tr>
+              <tr>
+                <td class="tabel_inti">
+                  <p class="s1"></p>
+                  <div>
+                    <p class="input1Inti1"></p>
+                    <p class="input1Inti2"></p>
+                    <p class="input1Inti3"></p>
+                    <p class="input1Inti4"></p>
+                    <p class="input1Inti5"></p>
+                  </div>
+                  <p class="s2"></p>
+                  <p class="input2Inti1"></p>
+                  <p class="input2Inti2"></p>
+                  <p class="input2Inti3"></p>
+                  <p class="input2Inti4"></p>
+                  <p class="input2Inti5"></p>
+                  <p class="s3"></p>
+                  <p class="input3Inti1"></p>
+                  <p class="input3Inti2"></p>
+                  <p class="input3Inti3"></p>
+                  <p class="input3Inti4"></p>
+                  <p class="input3Inti5"></p>
+                  <p class="s4"></p>
+                  <p class="input4Inti1"></p>
+                  <p class="input4Inti2"></p>
+                  <p class="input4Inti3"></p>
+                  <p class="input4Inti4"></p>
+                  <p class="input4Inti5"></p>
+                  <p class="s5"></p>
+                  <p class="input5Inti1"></p>
+                  <p class="input5Inti2"></p>
+                  <p class="input5Inti3"></p>
+                  <p class="input5Inti4"></p>
+                  <p class="input5Inti5"></p>
+                  <p class="s6"></p>
+                  <p class="input6Inti1"></p>
+                  <p class="input6Inti2"></p>
+                  <p class="input6Inti3"></p>
+                  <p class="input6Inti4"></p>
+                  <p class="input6Inti5"></p>
+                </td>
+                <td><p id="waktu1" class="inputWaktuInti"></p></td>
+              </tr>
+            </table>
             <p><b>c. Penutup</b></p>
             <table>
               <tr>
@@ -739,14 +707,14 @@
             <p class="inputJenis"></p>
             <ol>
               <li>Sikap</li>
-                <p><span class="inputTeknik1"></span></p>
-                <!-- <p>Instrumen : <span class="inputInstrumen1"></span></p> -->
+              <p><span class="inputTeknik1"></span></p>
+              <!-- <p>Instrumen : <span class="inputInstrumen1"></span></p> -->
               <li>Pengetahuan</li>
-                <p><span class="inputTeknik2"></span></p>
-                <!-- <p>Instrumen : <span class="inputInstrumen2"></span></p> -->
+              <p><span class="inputTeknik2"></span></p>
+              <!-- <p>Instrumen : <span class="inputInstrumen2"></span></p> -->
               <li>Keterampilan</li>
-                <p><span class="inputTeknik3"></span></p>
-                <!-- <p>Instrumen : <span class="inputInstrumen3"></span></p> -->
+              <p><span class="inputTeknik3"></span></p>
+              <!-- <p>Instrumen : <span class="inputInstrumen3"></span></p> -->
             </ol>
             <p class="inputassesmen1"></p>
             <p class="inputassesmen2"></p>
@@ -773,13 +741,20 @@
             <p class="inputSiswa2"></p>
             <p class="inputSiswa3"></p>
           </div>
-          
 
           <div class="ttd">
             <table>
               <tr>
-                <td class="tb_ttd"></td>
-                <td class="tb_ttd2"><p class="tempat">Boyolali, <span id="tanggalwaktu"></span></p></td>
+                <td class="tb_ttd">
+                  <p class="namaSekolah"></p>
+                </td>
+                <td class="tb_ttd1"></td>
+                <td class="tb_ttd2">
+                  <p>
+                    <span class="nama_tempat"></span>,
+                    <span id="tanggalwaktu"></span>
+                  </p>
+                </td>
               </tr>
               <tr>
                 <td></td>
@@ -798,16 +773,17 @@
                 <td></td>
               </tr>
               <tr>
+                <td><p class="nama_kepsek"></p></td>
                 <td></td>
                 <td><p class="nama_terang"></p></td>
               </tr>
             </table>
-            
           </div>
-          <button id="back_btn" onclick = "kembali()">Kembali</button>
-          <button id="print_btn" value="print" onclick="window.print()">Download</button>
+          <button id="back_btn" onclick="kembali()">Kembali</button>
+          <button id="print_btn" value="print" onclick="window.print()">
+            Download
+          </button>
         </div>
-        
       </main>
     </section>
     <!-- konten section end -->
@@ -819,6 +795,5 @@
 
     <!-- javascript -->
     <script src="js/script.js"></script>
-
   </body>
 </html>
