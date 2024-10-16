@@ -208,15 +208,54 @@
         <div class="strategiPembelajaran">
           <h3>Strategi Pembelajaran</h3>
 
-          <div class="pendekatan">
+          <p>Pendekatan Pembelajaran</p>
+          <form action="">
+            <select
+              name="pendekatan"
+              id="pendekatan"
+              class="pendekatan"
+              onchange="Pendekatan()"
+            >
+              <option value="">Pilih Pendekatan Pembelajaran</option>
+              <option value="Saintifik">Saintifik</option>
+              <option value="Contextual Teaching and Learning">
+                Contextual Teaching and Learning
+              </option>
+              <option value="Technological Pedagogic Content Knowledge">
+                Technological Pedagogic Content Knowledge
+              </option>
+              <option
+                value="STEAM (Science, Technology, Engineering, Art, and Mathematics)"
+              >
+                STEAM (Science, Technology, Engineering, Art, and Mathematics)
+              </option>
+            </select>
+          </form>
+
+          <!-- <div class="pendekatan">
             <p>Pendekatan : <span class="pendekatanPembelajaran"></span></p>
             <button id="contextual" onclick="contextual()">CTL</button>
             <button id="tpack" onclick="tpack()">TPACK</button>
             <button id="saintifik" onclick="saintifik()">Saintifik</button>
             <button id="steam" onclick="steam()">STEAM</button>
-          </div>
+          </div> -->
 
-          <div class="model">
+          <p>Model Pembelajaran</p>
+          <form action="">
+            <select name="model" id="model" class="model" onchange="Model()">
+              <option value="">Pilih Model Pembelajaran</option>
+              <option value="Inquiry Learning">Inquiry Learning</option>
+              <option value="Problem Based Learning">
+                Problem Based Learning
+              </option>
+              <option value="Project Based Learning">
+                Project Based Learning
+              </option>
+              <option value="Discovery Learning">Discovery Learning</option>
+            </select>
+          </form>
+
+          <!-- <div class="model">
             <p>Model : <span class="modelPertemuan"></span></p>
             <button id="model1" onclick="inquiry()">Inquiry Learning</button>
             <button id="model2" onclick="problem()">
@@ -228,16 +267,33 @@
             <button id="model4" onclick="discovery()">
               Discovery Learning
             </button>
-          </div>
+          </div> -->
 
-          <div class="metode">
+          <p>Metode Pembelajaran</p>
+          <form action="">
+            <select
+              name="metode"
+              id="metode"
+              class="metode"
+              onchange="Metode()"
+            >
+              <option value="">Pilih Metode Pembelajaran</option>
+              <option value="Ceramah">Ceramah</option>
+              <option value="Diskusi">Diskusi</option>
+              <option value="Demonstrasi">Demonstrasi</option>
+              <option value="Eksperimen">Eksperimen</option>
+              <option value="Tanya Jawab">Tanya Jawab</option>
+            </select>
+          </form>
+
+          <!-- <div class="metode">
             <p>Metode : <span class="metodePembelajaran"></span></p>
             <button class="ceramah">Ceramah</button>
             <button class="diskusi">Diskusi</button>
             <button class="demonstrasi">Demonstrasi</button>
             <button class="eksperimen">Eksperimen</button>
             <button class="tanyajawab">TanyaJawab</button>
-          </div>
+          </div> -->
         </div>
 
         <div class="target">

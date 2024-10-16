@@ -605,6 +605,105 @@ function discovery() {
   S6.style.display = "block";
 }
 
+function Model() {
+  let model = document.querySelector(".model").value;
+  let sintaks1 = document.querySelector(".sintak0");
+  let sintaks2 = document.querySelector(".sintak1");
+  let sintaks3 = document.querySelector(".sintak2");
+  let sintaks4 = document.querySelector(".sintak3");
+  let sintaks5 = document.querySelector(".sintak4");
+  let sintaks6 = document.querySelector(".sintak5");
+  let sintakHide = document.querySelector(".sintakhide");
+  let inputmodel = document.querySelector(".inputModel");
+  let S1 = document.querySelector(".s1");
+  let S2 = document.querySelector(".s2");
+  let S3 = document.querySelector(".s3");
+  let S4 = document.querySelector(".s4");
+  let S5 = document.querySelector(".s5");
+  let S6 = document.querySelector(".s6");
+
+  if (model === "Inquiry Learning") {
+    sintakHide.style.display = "block";
+
+    sintaks1.innerHTML = "<b>Orientasi<b>";
+    sintaks2.innerHTML = "<b>Merumuskan masalah</b>";
+    sintaks3.innerHTML = "<b>Merumuskan hipotesis</b>";
+    sintaks4.innerHTML = "<b>Mengumpulkan data</b>";
+    sintaks5.innerHTML = "<b>Menguji hipotesis</b>";
+    sintaks6.innerHTML = "<b>Menarik kesimpulan</b>";
+
+    inputmodel.innerHTML = "Inquiry Learning";
+
+    S1.innerHTML = "<b>Orientasi</b>";
+    S2.innerHTML = "<b>Merumuskan masalah</b>";
+    S3.innerHTML = "<b>Merumuskan hipotesis</b>";
+    S4.innerHTML = "<b>Mengumpulkan data</b>";
+    S5.innerHTML = "<b>Menguji hipotesis</b>";
+    S6.innerHTML = "<b>Menarik kesimpulan</b>";
+    S6.style.display = "block";
+  } else if (model === "Problem Based Learning") {
+    sintakHide.style.display = "none";
+
+    sintaks1.innerHTML = "<b>Orientasi pada masalah</b>";
+    sintaks2.innerHTML = "<b>Mengorganisasikan peserta didik untuk belajar</b>";
+    sintaks3.innerHTML =
+      "<b>Membimbing penyelidikan individu maupun kelompok</b>";
+    sintaks4.innerHTML = "<b>Mengembangkan dan menyajikan hasil karya</b>";
+    sintaks5.innerHTML =
+      "<b>Menganalisis dan mengevaluasi proses pemecahan masalah</b>";
+
+    inputmodel.innerHTML = "Problem-based Learning";
+
+    S1.innerHTML = "<b>Orientasi pada masalah</b>";
+    S2.innerHTML = "<b>Mengorganisasikan peserta didik untuk belajar</b>";
+    S3.innerHTML = "<b>Membimbing penyelidikan individu maupun kelompok</b>";
+    S4.innerHTML = "<b>Mengembangkan dan menyajikan hasil karya</b>";
+    S5.innerHTML =
+      "<b>Menganalisis dan mengevaluasi proses pemecahan masalah</b>";
+
+    S6.style.display = "none";
+  } else if (model === "Project Based Learning") {
+    sintakHide.style.display = "block";
+
+    sintaks1.innerHTML = "<b>Pertanyaan Mendasar</b>";
+    sintaks2.innerHTML = "<b>Mendesain Perencanaan Produk</b>";
+    sintaks3.innerHTML = "<b>Menyusun Jadwal Pembuatan";
+    sintaks4.innerHTML = "<b>Memonitor Keaktifan dan Perkembangan Proyek</b>";
+    sintaks5.innerHTML = "<b>Menguji Hasil</b>";
+    sintaks6.innerHTML = "<b>Evaluasi Pengalaman Belajar</b>";
+
+    inputmodel.innerHTML = "Project-based Learning";
+
+    S1.innerHTML = "<b>Pertanyaan Mendasar</b>";
+    S2.innerHTML = "<b>Mendesain Perencanaan Produk</b>";
+    S3.innerHTML = "<b>Menyusun Jadwal Pembuatan</b>";
+    S4.innerHTML = "<b>Memonitor Keaktifan dan Perkembangan Proyek</b>";
+    S5.innerHTML = "<b>Menguji Hasil</b>";
+    S6.innerHTML = "<b>valuasi Pengalaman Belajar</b>";
+    S6.style.display = "block";
+  } else if (model === "Discovery Learning") {
+    sintakHide.style.display = "block";
+
+    sintaks1.innerHTML = "<b>Pemberian Rangsang</b>";
+    sintaks2.innerHTML = "<b>Pernyataan atau Identifikasi Masalah</b>";
+    sintaks3.innerHTML = "<b>Pengumpulan Data</b>";
+    sintaks4.innerHTML = "<b>Pengolahan Data</b>";
+    sintaks5.innerHTML = "<b>Pembuktian</b>";
+    sintaks6.innerHTML = "<b>Menarik kesimpulan</b>";
+
+    inputmodel.innerHTML = "Discovery Learning";
+
+    S1.innerHTML = "<b>Pemberian Rangsang</b>";
+    S2.innerHTML = "<b>Pernyataan atau Identifikasi Masalah</b>";
+    S3.innerHTML = "<b>Pengumpulan Data</b>";
+    S4.innerHTML = "<b>Pengolahan Data</b>";
+    S5.innerHTML = "<b>Pembuktian</b>";
+    S6.innerHTML = "<b>Menarik kesimpulan</b>";
+    S6.style.display = "block";
+  } else {
+  }
+}
+
 //pendekatan
 function contextual() {
   let elemen = document.querySelector(".pendekatanPembelajaran");
@@ -637,19 +736,44 @@ function steam() {
     "STEAM (Science, Technology, Engineering, Art, and Mathematics)";
 }
 
+function Pendekatan() {
+  let elemen = document.querySelector(".pendekatan").value;
+  let inputPendekatan = document.querySelector(".inputPendekatan");
+
+  if (elemen === "Contextual Teaching and Learning") {
+    elemen.innerHTML = "Contextual Teaching and Learning";
+    inputPendekatan.innerHTML = "Contextual Teaching and Learning";
+  } else if (elemen === "Technological Pedagogic Content Knowledge") {
+    elemen.innerHTML = "TPACK (Technological Pedagogic Content Knowledge)";
+    inputPendekatan.innerHTML =
+      "TPACK (Technological Pedagogic Content Knowledge)";
+  } else if (elemen === "Saintifik") {
+    elemen.innerHTML = "Saintifik";
+    inputPendekatan.innerHTML = "Saintifik";
+  } else if (
+    elemen === "STEAM (Science, Technology, Engineering, Art, and Mathematics)"
+  ) {
+    elemen.innerHTML =
+      "STEAM (Science, Technology, Engineering, Art, and Mathematics)";
+    inputPendekatan.innerHTML =
+      "STEAM (Science, Technology, Engineering, Art, and Mathematics)";
+  } else {
+  }
+}
+
 // metode pembelajaran
 
-let metode1 = document.querySelector(".ceramah");
-let metode2 = document.querySelector(".diskusi");
-let metode3 = document.querySelector(".demonstrasi");
-let metode4 = document.querySelector(".eksperimen");
-let metode5 = document.querySelector(".tanyajawab");
+// let metode1 = document.querySelector(".ceramah");
+// let metode2 = document.querySelector(".diskusi");
+// let metode3 = document.querySelector(".demonstrasi");
+// let metode4 = document.querySelector(".eksperimen");
+// let metode5 = document.querySelector(".tanyajawab");
 
-metode1.onclick = Ceramah;
-metode2.onclick = Diskusi;
-metode3.onclick = Demonstrasi;
-metode4.onclick = Eksperimen;
-metode5.onclick = TanyaJawab;
+// metode1.onclick = Ceramah;
+// metode2.onclick = Diskusi;
+// metode3.onclick = Demonstrasi;
+// metode4.onclick = Eksperimen;
+// metode5.onclick = TanyaJawab;
 
 function Ceramah() {
   let metode = document.querySelector(".metodePembelajaran");
@@ -680,6 +804,24 @@ function TanyaJawab() {
   let inputMetode = document.querySelector(".inputMetode");
   metode.innerHTML = "Metode Tanya Jawab";
   inputMetode.innerHTML = "Metode Tanya Jawab";
+}
+
+function Metode() {
+  let metode = document.querySelector(".metode").value;
+  let inputMetode = document.querySelector(".inputMetode");
+
+  if (metode === "Ceramah") {
+    inputMetode.innerHTML = "Metode Ceramah";
+  } else if (metode === "Diskusi") {
+    inputMetode.innerHTML = "Metode Diskusi";
+  } else if (metode === "Demonstrasi") {
+    inputMetode.innerHTML = "Metode Demonstrasi";
+  } else if (metode === "Eksperimen") {
+    inputMetode.innerHTML = "Metode Eksperimen";
+  } else if (metode === "Tanya Jawab") {
+    inputMetode.innerHTML = "Metode Tanya Jawab";
+  } else {
+  }
 }
 
 // tambah kegitan
@@ -1773,7 +1915,7 @@ function alokasi_inti() {
 
     let totalInti = waktu1 + waktu2 + waktu3 + waktu4 + waktu5;
 
-    jmlWaktu.innerHTML = totalInti + "Menit";
+    jmlWaktu.innerHTML = totalInti + " Menit";
   }
 }
 
