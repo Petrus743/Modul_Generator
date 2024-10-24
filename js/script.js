@@ -83,10 +83,10 @@ function total_waktu() {
   }
 
   if (jenjang === "SD") {
-    total = jam_pembelajaran * 30;
+    total = jam_pembelajaran * 35;
     Jenjang();
   } else if (jenjang === "SMP") {
-    total = jam_pembelajaran * 35;
+    total = jam_pembelajaran * 40;
     Jenjang();
   } else if (jenjang === "SMA" || jenjang === "SMK") {
     total = jam_pembelajaran * 45;
@@ -387,26 +387,6 @@ function jumlahJam() {
     // }
   }
 }
-
-//profil pelajar
-function beriman() {
-  let input = document.createElement("p");
-  input.innerHTML = "Beriman dan bertakwa kepada Tuhan yang Maha Esa";
-
-  document.getElementById("p5").appendChild(input);
-}
-
-function gt() {
-  let input = document.createElement("p");
-  input.innerHTML = "Gotong Royong";
-
-  document.getElementById("p5").appendChild(input);
-}
-
-// function hapusProfil() {
-//   let gt = document.getElementById("p5");
-//   p5.removeChild(p5.lastChild);
-// }
 
 function mandiri() {
   let input = document.createElement("p");
